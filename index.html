@@ -32,7 +32,6 @@ b{color:var(--ink)}
   <div class="url">dwsystem.eu/ShiftFlow</div>
   <a id="go" class="btn" href="https://dwsystem.eu/ShiftFlow/">Otwórz nowy ShiftFlow →</a>
   <a class="btn lime" href="https://dwsystem.eu/ShiftFlow/instrukcja-ekran-startowy.pdf">📱 Jak dodać ikonę na telefon (PDF)</a>
-  <div id="count"></div>
   <ul>
     <li>Twoje godziny i ustawienia są <b>zachowane</b>.</li>
     <li>Pod nowym adresem <b>zaloguj się ponownie</b> tym samym e-mailem i hasłem.</li>
@@ -41,11 +40,8 @@ b{color:var(--ink)}
   <div class="footer">Created and Designed by <a href="https://dwsystem.eu/" target="_blank" rel="noopener"><b>DWSystem</b></a></div>
 </div>
 <script>
-  // nowy adres z zachowaniem reszty linku (np. link resetu hasła z maila)
-  var target='https://dwsystem.eu/ShiftFlow/'+location.search+location.hash;
-  document.getElementById('go').href=target;
-  var left=8,el=document.getElementById('count');
-  (function tick(){ if(left<=0){location.replace(target);return} el.textContent='Automatyczne przejście za '+left+' s…'; left--; setTimeout(tick,1000) })();
+  // przycisk prowadzi na nowy adres z zachowaniem reszty linku (np. link resetu hasła z maila) – bez automatycznego przejścia
+  document.getElementById('go').href='https://dwsystem.eu/ShiftFlow/'+location.search+location.hash;
 </script>
 </body>
 </html>
